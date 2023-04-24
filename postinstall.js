@@ -142,7 +142,7 @@ async function install(callback) {
     mkdirp.sync(opts.binPath);
     console.info(`Copying the relevant binary for your platform ${process.platform}`);
     let archVersionExtension = "";
-    if (ARCH_MAPPING[process.arch] === ARCH_MAPPING.x64) archVersion = "_v1"
+    if (ARCH_MAPPING[process.arch] === ARCH_MAPPING.x64) archVersionExtension = "_v1"
     const src = `./dist/syro-cli-delta-${process.platform}-${ARCH_MAPPING[process.arch]}_${process.platform}_${ARCH_MAPPING[process.arch]}${archVersionExtension}/${opts.binName}`;
     await execShellCommand(`cp ${src} ${opts.binPath}/${opts.binName}`);
     await verifyAndPlaceBinary(opts.binName, opts.binPath, callback);
