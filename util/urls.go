@@ -3,7 +3,7 @@ Copyright © 2023 Syro team <info@syro.com>
 */
 package util
 
-var ServerApiUrl = "http://localhost:1337/v1/functions"
+var ServerApiUrl = "https://ac0fcb7eb25867.lhr.life"
 
 // Auth API endpoints
 var CliLogin = "/cli_login"
